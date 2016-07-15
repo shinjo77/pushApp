@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "biz.uber.push"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "biz.uber.push"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "biz.uber.push"
+        }
+    },
+    "dependent_plugins": {}
+}
