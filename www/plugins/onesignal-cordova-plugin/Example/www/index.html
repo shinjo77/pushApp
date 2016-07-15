@@ -31,18 +31,27 @@
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
-            <p>Are we ready?</p>
+            <h1>Cordova</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device mate</p>
-                <p class="event received">Device is Ready mate</p>
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/onesignal.js"></script>
+        <script type="text/javascript" src="OneSignal.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+        <br>
+        <br>
+        <h1>OneSignal Example</h1>
+        <form>
+            <input type="button" value="Send Tag" onclick="sendTag()" />
+            <br>
+            <input type="button" value="Get Ids" onclick="getIds()" />
+        </form>
+        <p id="OneSignalUserId"></p>
+        <p style="word-break: break-all;" id="OneSignalPushToken"></p>
     </body>
 </html>
