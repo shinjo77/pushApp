@@ -1,5 +1,5 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="biz.uber.push" version="1.0.1">
-  <name>Push app test</name>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="biz.uber.push" version="1.0.11">
+  <name>Push app test dsdf</name>
   <description>Hello World sample application that responds to the deviceready event this is test.</description>
   <author href="http://ubwe.com" email="support@phonegap.com">PhoneGap Team</author>
   <content src="index.html"/>
