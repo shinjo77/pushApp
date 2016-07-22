@@ -39,7 +39,7 @@ var app = {
     onDeviceReady: function() {
 
         var notificationOpenedCallback = function(jsonData) {
-            console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+            alert('got message didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
         };
 
         window.plugins.OneSignal.init( "1c8e50b0-7607-4c7e-8251-6a9befad91e1",
