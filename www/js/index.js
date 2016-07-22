@@ -18,22 +18,6 @@
  */
 
 
- document.addEventListener('deviceready', function () {
-  // Enable to debug issues.
-  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
-  var notificationOpenedCallback = function(jsonData) {
-    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal.init( "1c8e50b0-7607-4c7e-8251-6a9befad91e1",
-                                        {googleProjectNumber: "834476493161"},
-                                        app.didReceiveRemoteNotificationCallBack);
-  
-  // Show an alert box if a notification comes in when the user is in your app.
-  window.plugins.OneSignal.enableInAppAlertNotification(true);
-}, false);
-
 
  
 var app = {
@@ -53,7 +37,27 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        alert('initialize')
+
+        var notificationOpenedCallback = function(jsonData) {
+            console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+        };
+
+        window.plugins.OneSignal.init( "1c8e50b0-7607-4c7e-8251-6a9befad91e1",
+            {googleProjectNumber: "834476493161"},
+            app.didReceiveRemoteNotificationCallBack);
+        window.plugins.OneSignal.setSubscription(true);
+
+
+        window.plugins.OneSignal.getIds(function(ids) {
+          console.log('getIds: ' + JSON.stringify(ids));
+          alert("userId = " + ids.userId + ", pushToken = " + ids.pushToken);
+        });
+        
+        window.plugins.OneSignal.enableNotificationWhenActive(true);
+        window.plugins.OneSignal.enableInAppAlertNotification(true);
+
+
+        
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -66,13 +70,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        
-        // Enable to debug issues.
-        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
-        window.plugins.OneSignal.init( "1c8e50b0-7607-4c7e-8251-6a9befad91e1",
-                                        {googleProjectNumber: "834476493161"},
-                                        app.didReceiveRemoteNotificationCallBack);
     },
     didReceiveRemoteNotificationCallBack : function(jsonData) {
         alert("Notification received:\n" + JSON.stringify(jsonData));
