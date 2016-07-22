@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="biz.uber.push" versionCode = "10" version="0.1.11">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="biz.uber.push" version="0.1.11">
   <name>Push app test version</name>
   <description>Hello World sample application that responds to the deviceready event this is test.</description>
   <author href="http://ubwe.com" email="support@phonegap.com">PhoneGap Team</author>
@@ -34,11 +34,9 @@
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
   <gap:plugin name="org.apache.cordova.media"/>
   <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-
-  <!-- Recommend the newest cli but requires cli-5.1.1+ and gradle for Android. -->
-  <!-- If the below settings are not compatible with your project set the "PGB ANT" version above. -->
-  <preference name="phonegap-version" value="cli-5.4.1" />
-  <preference name="android-build-tool" value="gradle" />
+  <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
+  <gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
+  <gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
