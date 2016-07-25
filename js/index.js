@@ -51,6 +51,8 @@ var app = {
         window.plugins.OneSignal.getIds(function(ids) {
           console.log('getIds: ' + JSON.stringify(ids));
           alert("userId = " + ids.userId + ", pushToken = " + ids.pushToken);
+          document.getElementById("pushId").value = ids.userId;
+
         });
         
         window.plugins.OneSignal.enableNotificationWhenActive(true);
