@@ -33,7 +33,7 @@
   <gap:plugin name="org.apache.cordova.globalization"/>
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
   <gap:plugin name="org.apache.cordova.media"/>
-  <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
+  <!-- <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" /> -->
   <gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
   <gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
   <icon src="icon.png"/>
@@ -68,7 +68,7 @@
   <allow-intent href="tel:*"/>
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
-  <allow-intent href="geo:*"/><!-- 
+  <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
@@ -77,5 +77,5 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   <platform name="windows-phone">
-  </platform> -->
+  </platform>
 </widget>
