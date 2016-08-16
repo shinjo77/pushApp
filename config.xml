@@ -34,8 +34,8 @@
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
   <gap:plugin name="org.apache.cordova.media"/>
   <!-- <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" /> -->
-  <gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
-  <gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
+  <!-- <gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
+  <gap:plugin name="cordova-plugin-android-support-v4" source="npm" /> -->
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
